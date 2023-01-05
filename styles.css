@@ -1,0 +1,268 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: rgb(32,32,32);
+    background-color: #fffefe;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ====== HEADER ===== */
+
+.container-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(107,157,158);
+    padding-right: 2rem;
+    padding-left: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+}
+
+header h1{
+    color: #fffefe;
+    margin: 0;
+}
+
+.navbar a img {
+    height: 30px;
+}
+
+.container-nav a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 1rem;
+} 
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    list-style: none;
+}
+
+/* ====== HERO ==== */
+
+#hero {
+   margin-top: 4rem;
+   text-align: center;
+   background-image: url(./Img/imagecasa2.png);
+   background-size: cover;
+   height: 500px;
+}
+
+#hero h2 {
+  padding-top: 4.5rem;
+  letter-spacing: 1rem;
+}
+
+#hero h3 {
+    font-size: 60px;
+    font-weight: 700;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #hero h3 span {
+    text-shadow: 0 15px 25px #fff;
+    padding: 10px 15px;
+    display: table-cell;
+  }
+  
+  #hero h3:hover span {
+    animation: dance .5s infinite;
+    cursor: pointer;
+  }
+  
+  @keyframes dance {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-30px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+  
+  #hero h3 span:nth-child(1) {
+     animation-delay: .1s;
+  }
+  #hero h3 span:nth-child(2) {
+    animation-delay: .3s;
+  }
+  #hero h3 span:nth-child(3) {
+    animation-delay: .5s;
+  }
+  #hero h3 span:nth-child(4) {
+    animation-delay: .7s;
+  }
+  
+
+/* ==== SERVICIOS === */
+
+.servicios {
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8));
+    color: #fffefe;
+    margin-top: 0;
+    padding: 2rem 5rem;
+}
+
+.servicios p {
+  font-size: 20px;
+}
+
+.negocio {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ece8e8;
+}
+
+.metodologia {
+  width: 600px;
+  padding: 2rem 3rem;
+  background-color: #dad8d8;
+}
+
+/* ====== CONTACTOS ===== */ 
+
+.footer {
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8));
+    color: #fffefe;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.credits {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.mail p {
+    padding-right: 0.7rem;
+}
+
+.instalogo {
+    height: 60px;
+}
+
+.instalogo:hover {
+  opacity: 0.7;
+}
+
+.idlogo {
+    height: 45px;
+}
+
+.idlogo:hover {
+  opacity: 0.7;
+}
+
+.mail a {
+    color: #fffefe;
+}
+
+.mail a:hover {
+    color: #89bac5;
+}
+
+.credits p a {
+  color: #fffefe;
+}
+
+/* ===== IMAGE CARROUSSEL ==== */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/5 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+@media only screen and (max-width: 440px) {
+   .servicios p {
+    font-size: 18px;
+   }
+}
